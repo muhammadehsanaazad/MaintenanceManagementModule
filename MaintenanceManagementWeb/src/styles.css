@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ngx-toastr/toastr.css";
+
+@import "../node_modules/ngx-spinner/animations/ball-spin-clockwise.css"
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.full-width-date {
+  width: 100%;
+}
+
+.full-width-button {
+  width: 100%;
+  margin: 0 10px;
+}
+
+.button-div {
+  display: flex;
+  margin: 20px;
+}
+
+mat-card {
+  padding: 16px;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-input-element {
+  width: 100%;
+}
+
+.warn {
+  color: red;
+}
+
+.styled-card {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 16px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #3f51b5;
+  font-size: 24px;
+}
+
+table {
+  width: 100%;
+}
+
+.icon-style {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  font-weight: bold;
+}
+
+.right-align {
+  text-align: right !important;
+}

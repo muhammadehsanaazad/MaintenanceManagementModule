@@ -1,0 +1,41 @@
+<h2 mat-dialog-title>Create new service</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="serviceForm.addOrUpdateForm">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Service name</mat-label>
+      <input matInput type="text" formControlName="serviceName" />
+
+      <mat-error
+        *ngIf="serviceForm.addOrUpdateForm.get('serviceName')?.touched && serviceForm.addOrUpdateForm.get('serviceName')?.hasError('required')">
+        Service name is required
+      </mat-error>
+      <mat-error
+        *ngIf="serviceForm.addOrUpdateForm.get('serviceName')?.hasError('serviceName') && !serviceForm.addOrUpdateForm.get('serviceName')?.hasError('required')">
+        Maximum 100 characters allowed
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width-date">
+      <mat-label>Service date</mat-label>
+      <input matInput [matDatepicker]="picker" [min]="minDate" readonly formControlName="serviceDate">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+
+      <mat-error
+        *ngIf="serviceForm.addOrUpdateForm.get('serviceDate')?.touched && serviceForm.addOrUpdateForm.get('serviceDate')?.hasError('required')">
+        Service date is required
+      </mat-error>
+    </mat-form-field>
+
+    <br>
+    <div class="button-div">
+      <button mat-raised-button color="primary" class="full-width-button" [mat-dialog-close]="true">
+        Cancel
+      </button>
+      <button mat-raised-button color="primary" class="full-width" [disabled]="serviceForm.addOrUpdateForm.invalid"
+        [mat-dialog-close]="true" (click)="Save()">
+        Save
+      </button>
+    </div>
+  </form>
+</mat-dialog-content>

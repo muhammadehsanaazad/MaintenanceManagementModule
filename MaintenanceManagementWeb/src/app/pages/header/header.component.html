@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" class="header-toolbar">
+
+  <span>{{fullName}}</span>
+  <span class="spacer"></span>
+  <span class="center">Maintenance Management</span>
+
+  <span class="spacer"></span>
+  <button *ngIf="fullName !== null" mat-button (click)="Logout()">Logout</button>
+</mat-toolbar>
+
+<br><br><br>

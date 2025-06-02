@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MaintenanceManagementModule/.vs
+/MaintenanceManagementModule/MaintenanceManagementModule.API/bin
+/MaintenanceManagementModule/MaintenanceManagementModule.API/obj
+/MaintenanceManagementModule/MaintenanceManagementModule.API/Properties/PublishProfiles
+/MaintenanceManagementModule/MaintenanceManagementModule.Application/bin
+/MaintenanceManagementModule/MaintenanceManagementModule.Application/obj
+/MaintenanceManagementModule/MaintenanceManagementModule.Domain/bin
+/MaintenanceManagementModule/MaintenanceManagementModule.Domain/obj
+/MaintenanceManagementModule/MaintenanceManagementModule.Infrastructure/bin
+/MaintenanceManagementModule/MaintenanceManagementModule.Infrastructure/obj
+/.vs

@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+}
+
+.not-found-card {
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}

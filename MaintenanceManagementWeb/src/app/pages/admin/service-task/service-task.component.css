@@ -1,0 +1,16 @@
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.back-icon {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+mat-card-title {
+  flex-grow: 1;
+  text-align: center;
+}

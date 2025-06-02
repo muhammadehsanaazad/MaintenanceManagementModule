@@ -1,0 +1,45 @@
+<div style="max-width: 400px; margin: auto; padding-top: 100px;">
+  <mat-card>
+    <br><br>
+    <mat-card-content>
+      <form [formGroup]="authForm.loginForm" (ngSubmit)="Login()">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" />
+
+          <mat-error *ngIf="authForm.loginForm.get('email')?.touched && authForm.loginForm.get('email')?.hasError('required')">
+            Email is required
+          </mat-error>
+
+          <mat-error *ngIf="authForm.loginForm.get('email')?.hasError('email') && !authForm.loginForm.get('email')?.hasError('required')">
+            Invalid email format
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" />
+
+          <mat-error *ngIf="authForm.loginForm.get('password')?.hasError('required')">
+            Password is required
+          </mat-error>
+
+          <mat-error
+            *ngIf="authForm.loginForm.get('password')?.hasError('minlength') && !authForm.loginForm.get('password')?.hasError('required')">
+            Password must be at least 6 characters
+          </mat-error>
+
+          <mat-error
+            *ngIf="authForm.loginForm.get('password')?.hasError('pattern') && !authForm.loginForm.get('password')?.hasError('required')">
+            Password must contain at least 1 uppercase, 1 lowercase, and 1 digit
+          </mat-error>
+        </mat-form-field>
+
+        <br><br><br>
+        <button mat-raised-button color="primary" class="full-width" type="submit" [disabled]="authForm.loginForm.invalid">
+          Login
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
